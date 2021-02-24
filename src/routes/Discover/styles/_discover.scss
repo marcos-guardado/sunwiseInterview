@@ -1,5 +1,19 @@
+@import "../../../styles/vars";
 .discover {
   .animate__animated.animate__fadeIn {
     --animate-duration: 1.5s;
+  }
+
+  button {
+    a {
+      text-decoration: none;
+      color: $secondary-orange;
+    }
+    background-color: $primary-blue;
+    border: none;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    width: 20%;
+    height: 50px;
   }
 }

@@ -51,29 +51,34 @@ function Discover() {
   // getPlayList();
   return (
     <div className="discover">
-      <button>
-        <a href="http://localhost:8888/">inicia sesion</a>
-      </button>
-      {data && (
-        <>
-          <DiscoverBlock
-            text="RELEASED THIS WEEK"
-            id="released"
-            data={[data.newReleases.albums.items]}
-          />
-          <DiscoverBlock
-            text="FEATURED PLAYLISTS"
-            id="featured"
-            data={[data.playlists.playlists.items]}
-          />
-          <DiscoverBlock
-            text="BROWSE"
-            id="browse"
-            data={[data.categories.categories.items]}
-            imagesKey="icons"
-          />
-        </>
-      )}
+      <div>
+        <button className="">
+          <a href="http://localhost:8888/">inicia sesion</a>
+        </button>
+      </div>
+
+      <div>
+        {data && (
+          <>
+            <DiscoverBlock
+              text="RELEASED THIS WEEK"
+              id="released"
+              data={[data.newReleases.albums.items]}
+            />
+            <DiscoverBlock
+              text="FEATURED PLAYLISTS"
+              id="featured"
+              data={[data.playlists.playlists.items]}
+            />
+            <DiscoverBlock
+              text="BROWSE"
+              id="browse"
+              data={[data.categories.categories.items]}
+              imagesKey="icons"
+            />
+          </>
+        )}
+      </div>
     </div>
   );
 }
